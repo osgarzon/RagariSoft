@@ -5,3 +5,15 @@
     <input type="text" name="contraseña" placeholder="contraseña">
     <button>Guardar</button>
 </form>
+
+
+<div>
+    {% for usuario in usuariosdb %}
+        <div>
+            <p>{{usuario.id_Usuario}}</p>
+            <div>
+                <a href="{{url_for('usuarios.del_usuario', id=usuario.id_Usuario)}}">Eliminar</a> 
+            </div>
+        </div>
+    {% endfor %}
+</div>
