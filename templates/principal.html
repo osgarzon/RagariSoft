@@ -1,0 +1,160 @@
+{%extends 'layout.html'%}
+
+{%block body %}
+
+      <form class="row g-3">
+
+        <div class="col-sm">
+          <img src="static/images/perfil.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+        </div>
+
+        <div class="col-sm">
+          {{username}}
+        </div>
+
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <div class="dropdown">
+              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                Profesor
+              </a>
+            
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown">
+              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                Materia
+              </a>
+            
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div>
+          </li>
+          
+        </ul>
+
+
+          <div class="row mb-3">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr id="days">
+                  <th scope="col">Hora</th>
+                  <th scope="col">Lunes</th>
+                  <th scope="col">Martes</th>
+                  <th scope="col">Miercoles</th>
+                  <th scope="col">Jueves</th>
+                  <th scope="col">Viernes</th>
+                  <th scope="col">Sabado</th>
+                  <th scope="col">Domingo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" id="hora">06:00 08:00</th>
+                  <td>Prueba</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row" id="hora">08:00 10:00</th>
+                  <td>Prueba</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row" id="hora">10:00 12:00</th>
+                  <td>Prueba</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row" id="hora">12:00 14:00</th>
+                  <td>Prueba</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row" id="hora">14:00 16:00</th>
+                  <td>Prueba</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row" id="hora">16:00 18:00</th>
+                  <td>Prueba</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row" id="hora">18:00 20:00</th>
+                  <td>Prueba</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row" id="hora">20:00 22:00</th>
+                  <td>Prueba</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row" id="hora">22:00 24:00</th>
+                  <td>Prueba</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+    </form>        
+</body>
+
+{%endblock%}

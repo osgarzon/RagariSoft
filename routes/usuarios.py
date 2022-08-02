@@ -1,18 +1,39 @@
 from flask import Blueprint, render_template, request, redirect, flash, url_for
 from models.usuario import Usuario
+from models.usuariolog import Usuariolog
 from utils.db import db
+from flask_login import login_user, logout_user, login_required
+
 
 
 usuarios = Blueprint('usuarios', __name__)
 
-@usuarios.route('/ingreso')
-def home():
+
+
+@usuarios.route('/signup')
+def signup():
     usuariosdb = Usuario.query.all()
     return render_template('registro.html', usuariosdb = usuariosdb)
 
-@usuarios.route('/principal')
-def principal():
-    return render_template('index.html')
+@usuarios.route('/signin', methods=['POST', 'GET'])
+def signin():
+
+    if request.method=='POST':
+        nusuario = request.form['usuario']
+        contraseña = request.form['contraseña']
+        
+        user=Usuariolog.login(nusuario, contraseña)
+        if user=='Contraseña incorrecta':
+            flash(user)
+            return redirect('/signin')
+        elif user=='Usuario inexistente':
+            flash(user)
+            return redirect('/signin')
+        else:
+            login_user(user)
+            return render_template('/principal.html')
+    #else:
+    return render_template('/index.html')
 
 @usuarios.route('/registro')
 def dir_registro():
@@ -20,14 +41,18 @@ def dir_registro():
 
 @usuarios.route('/obtenerRegistro', methods=['POST'])
 def add_usuario():
+
     nusuario = request.form['usuario']
     nombre = request.form['nombre']
     correo = request.form['correo']
     contraseña = request.form['contraseña']
 
-    usuario = Usuario(nusuario, nombre, correo, contraseña)
+    user=Usuario.query.filter_by(id_Usuario = request.form['usuario']).first()
+    if user:
+        flash('Usuario ya existe', 'warning')
+        return redirect('/signup')
 
-    print(usuario)
+    usuario = Usuario(nusuario, nombre, correo, contraseña)
 
     db.session.add(usuario)
     db.session.commit()
