@@ -1,3 +1,16 @@
+{%extends 'layout.html'%}
+
+{%block body%}
+
+{% with messages = get_flashed_messages()%}
+
+    {% if messages %}
+        {%for message in messages%}
+            {{message}}
+        {%endfor%}
+    {%endif%}
+{%endwith%}
+
 <form action="/obtenerRegistro" method="POST">
     <input type="text" name="usuario" placeholder="usuario">
     <input type="text" name="nombre" placeholder="nombre">
@@ -17,3 +30,5 @@
         </div>
     {% endfor %}
 </div>
+
+{%endblock%}

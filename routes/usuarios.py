@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect
+from flask import Blueprint, render_template, request, redirect, flash, url_for
 from models.usuario import Usuario
 from utils.db import db
 
@@ -32,12 +32,23 @@ def add_usuario():
     db.session.add(usuario)
     db.session.commit()
     
-    return "registrado"
+    flash('usuario creado')
+    return redirect(url_for("usuarios.home"))
 
 
-@usuarios.route('/actualizarUsuario')
-def act_usuario():
-    return 'tarea guardada'
+@usuarios.route('/actualizarUsuario/<id>', methods=['POST', 'GET'])
+def act_usuario(id):
+    usuario = Usuario.query.get(id)
+    if request.method == 'POST':
+        usuario.id_Usuario = request.form['usuario']
+        usuario.nombre_apellido = request.form['nombre']
+        usuario.correo = request.form['correo']
+        usuario.contraseña = request.form['contraseña'] 
+        db.session.commit()
+        
+        return redirect('/registro.html')
+        
+    return render_template('registro.html', usuario=usuario)
 
 @usuarios.route('/borrar/<id>')
 def del_usuario(id):
