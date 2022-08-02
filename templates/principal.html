@@ -4,7 +4,7 @@
       <h1>Bienvenido {{current_user.nombre_apellido}}</h1>
       <form class="row g-3">
         <div class="col-sm">
-          <img src="static/images/perfil.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+          <img src="{{url_for('static',filename='iconos/perfil.png')}}" alt="" width="30" height="24" class="d-inline-block align-text-top">
         </div>
         <div class="col-sm">
         </div>
@@ -57,7 +57,10 @@
               <tbody>
                 <tr>
                   <th scope="row" id="hora">06:00 08:00</th>
-                  <td>Prueba</td>
+                  <td>
+                    <script>
+
+                    </script>Seleccionar</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -150,7 +153,23 @@
             </table>
           </div>
         </div>
-    </form>        
+    </form>
+    
+    <form>
+      <div class="row g-2">
+        <div class="col-md-6">
+          <div class="row g-2">
+            <button class="btn btn-primary">Agregar<img id="botonimg" src="{{url_for('static',filename='iconos/agregar.png')}}"></button>
+            <button class="btn btn-primary">Eliminar<img id="botonimg" src="{{url_for('static',filename='iconos/borrar.png')}}"></button>
+          </div>
+          
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Password</label>
+          <button class="btn btn-primary">Actualizar<img id="botonimg" src="{{url_for('static',filename='iconos/actualizar.png')}}"></button>
+        </div>
+      </div>
+    </form>
 </body>
 
 {%endblock%}

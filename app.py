@@ -8,7 +8,7 @@ from models.usuario import Usuario
 app = Flask(__name__)
 
 app.secret_key = "secret key"
-app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://sergio:1234@localhost/studilydb"
+app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root:dan961030@localhost/studilydb"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 SQLAlchemy(app)
