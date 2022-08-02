@@ -102,3 +102,15 @@ body,
 		.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
 			background-color: #c0392b !important;
 		}
+
+		.message{
+			font-size: 20px;
+		}
+		
+		.link{
+			color: #DB8840;
+		}
+		
+		.link:hover{
+			color: #c0392b;
+		}

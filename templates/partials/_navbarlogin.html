@@ -16,11 +16,20 @@
                 <div class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        Inicio de Sesión
+                        {%if current_user.id_Usuario%}
+                            {{current_user.nombre_apellido}}
+                        {%else%}
+                            Inicio de Sesión
+                        {%endif%}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/signin">Iniciar Sesión</a></li>
-                        <li><a class="dropdown-item" href="/signup">Registrarse</a></li>
+                        {%if current_user.id_Usuario%}
+                            <li><a class="dropdown-item" href="/principal">Principal</a></li>
+                            <li><a class="dropdown-item" href="/logout">Cerrar sesión</a></li>
+                        {%else%}
+                            <li><a class="dropdown-item" href="/signin">Iniciar Sesión</a></li>
+                            <li><a class="dropdown-item" href="/signup">Registrarse</a></li>
+                        {%endif%}
                     </ul>
                 </div>
             </form>

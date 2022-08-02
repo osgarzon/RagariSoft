@@ -1,17 +1,13 @@
 {%extends 'layout.html'%}
 
 {%block body %}
-
+      <h1>Bienvenido {{current_user.nombre_apellido}}</h1>
       <form class="row g-3">
-
         <div class="col-sm">
           <img src="static/images/perfil.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
         </div>
-
         <div class="col-sm">
-          {{username}}
         </div>
-
         <ul class="nav justify-content-end">
           <li class="nav-item">
             <div class="dropdown">
