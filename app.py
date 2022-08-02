@@ -1,5 +1,7 @@
+import imp
 from flask import Flask
 from routes.usuarios import usuarios
+from routes.horarios import horarios
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from models.usuariolog import Usuariolog
@@ -26,3 +28,4 @@ def load_user(id_Usuario):
 
 
 app.register_blueprint(usuarios)
+app.register_blueprint(horarios)

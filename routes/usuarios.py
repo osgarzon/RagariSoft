@@ -1,4 +1,6 @@
 from flask import Blueprint, render_template, request, redirect, flash, url_for
+
+from models.tarea import Tarea
 from models.usuario import Usuario
 from models.usuariolog import Usuariolog
 from utils.db import db
@@ -54,6 +56,7 @@ def add_usuario():
         return redirect("/signup")
 
     usuario = Usuario(nusuario, nombre, correo, contraseña)
+    tarea = Tarea(nusuario)
 
     db.session.add(usuario)
     db.session.commit()
@@ -87,10 +90,7 @@ def del_usuario(id):
     return redirect("/ingreso")
 
 
-@usuarios.route("/principal")
-@login_required
-def principal():
-    return render_template("principal.html")
+
 
 
 def status_401(error):
