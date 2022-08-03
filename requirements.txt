@@ -4,4 +4,8 @@ flask-wtf
 flask-form
 flask-testing
 flask-sqlalchemy
+flask-marshmallow
+marshmallow-sqlalchemy
 wtforms[email]
+psycopg2
+mysqlclient

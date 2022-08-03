@@ -1,5 +1,6 @@
 from flask import Flask, make_response, redirect, request, render_template, abort, session, request, jsonify, url_for, flash
 from flask_wtf import FlaskForm
+from sqlalchemy import true
 from wtforms.fields import StringField, PasswordField, SubmitField, DateField, EmailField
 from wtforms.validators import DataRequired, Email
 from flask_sqlalchemy import SQLAlchemy
@@ -10,6 +11,8 @@ app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'LLAVE_SECRETA'
 
+if __name__ == '__app__':
+    app.run(debug=True)
 
 class LoginFormSignIn(FlaskForm):
     username = StringField('Usuario', validators=[DataRequired()])
@@ -25,7 +28,7 @@ class LoginFormSignUp(FlaskForm):
     submit = SubmitField('Registrarse')
 
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///database/studily.db"
+#app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///database/studily.db"
 db = SQLAlchemy(app)
 
 
@@ -125,6 +128,9 @@ def signup():
 
     return render_template('registro.html', **context)
 
+@app.route("/elcarnal", methods=['GET', 'POST'])
+def elcarnal():
+    return render_template('elcarnal.html')
 
 @app.errorhandler(404)
 def not_found(error):
@@ -137,5 +143,3 @@ def internal_server_error(error):
     return render_template('500.html', error=error)
 
 
-if __name__ == '__app__':
-    app.run()

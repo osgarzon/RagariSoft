@@ -3,14 +3,15 @@
 {% import 'bootstrap/wtf.html' as wtf%}
 
 {%block title%}
-    {{super()}} 
-    Inicio
+{{super()}}
+Inicio
 {%endblock%}
 {%block content%}
 
 <body>
-{%if username %}
+    {%if username %}
     <div>
+<<<<<<< HEAD
         {{username}}
     </div>
     {% if user_ip %}
@@ -26,11 +27,31 @@
     <br>
     <h1>Contraseña: {{password}}</h1>
     {% else %}
+=======
+        Bienvenido, {{username|capitalize}}
+>>>>>>> 0abb34a (avance dos de agosto)
 
-    Este es el home
-
-{% endif %}
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="{{url_for('static',filename='images/elcarnal.jpeg')}}" alt="" width="300" height="300"
+                    class="d-inline-block align-text-top">
+                <div class="caption">
+                    <h3>El carnal</h3>
+                    <p>...</p>
+                    <form action="/elcarnal" method="post">
+                    <p>
+                        <button type="submit" href="#" class="btn btn-primary" role="button">Botón</button>
+                    </p>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
 </body>
+
 </html>
-  
+
 {%endblock%}
