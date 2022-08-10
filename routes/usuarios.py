@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, request, redirect, flash, url_for
-
 from models.tarea import Tarea
+from models.materia import Materia
+from models.profesor import Profesor
 from models.usuario import Usuario
 from models.usuariolog import Usuariolog
 from utils.db import db
@@ -8,6 +9,11 @@ from flask_login import login_user, logout_user, login_required
 
 
 usuarios = Blueprint("usuarios", __name__)
+
+
+@usuarios.route("/")
+def inicio():
+    return render_template("/index.html")
 
 
 @usuarios.route("/signup")
@@ -33,7 +39,6 @@ def signin():
         else:
             login_user(user)
             return redirect("/principal")
-    # else:
     return render_template("/index.html")
 
 
@@ -56,8 +61,6 @@ def add_usuario():
         return redirect("/signup")
 
     usuario = Usuario(nusuario, nombre, correo, contraseña)
-    tarea = Tarea(nusuario)
-
     db.session.add(usuario)
     db.session.commit()
 
@@ -90,18 +93,13 @@ def del_usuario(id):
     return redirect("/ingreso")
 
 
-
-
-
-def status_401(error):
-    flash("Acceso denegado")
-    return redirect("/signin")
+def crearTablas():
+    materia = Materia(0, 0, 0)
+    profesor = Profesor(0, 0, 0)
+    tarea = Tarea(0, 0, 0)
 
 
 @usuarios.route("/logout")
 def logout():
     logout_user()
     return redirect("/signin")
-
-
-usuarios.register_error_handler(401, status_401)

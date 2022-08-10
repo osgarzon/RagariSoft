@@ -102,30 +102,3 @@ body,
 		.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
 			background-color: #c0392b !important;
 		}
-
-		.message{
-			font-size: 20px;
-		}
-		
-		.tittle{
-			font-size: 25px;
-		}
-
-		.link{
-			color: #DB8840;
-		}
-		
-		.link:hover{
-			color: #c0392b;
-		}
-
-		#botonimg {
-			height: 50px;
-			width: 50px;
-			border-radius: 50%;
-			border: 2px solid #00768F;
-		}
-		#texto{
-			color: #00768F;
-		}
-		

@@ -18,48 +18,51 @@
 <br><br><br><br>
 
 <div class="registro">
-    <div class="container h-100">
-      <div class="d-flex justify-content-center h-100">
-        <div class="user_card">
-          <div class="d-flex justify-content-center">
-            <div class="brand_logo_container">
-              <img src="{{ url_for('static', filename='iconos/perfil.png') }}" class="brand_logo" alt="Logo">
+  <div class="container h-100">
+    <div class="d-flex justify-content-center h-100">
+      <div class="user_card">
+        <div class="d-flex justify-content-center">
+          <div class="brand_logo_container">
+            <img src="{{ url_for('static', filename='iconos/perfil.png') }}" class="brand_logo" alt="Logo">
+            <p class="tittle">Registrarse</p>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center form_container">
+          <form action="/obtenerRegistro" method="POST">
+            <div class="input-group mb-3">
+              <div class="input-group-append">
+                <span class="input-group-text"><i class="fas fa-user"></i></span>
+              </div>
+              <input type="email" name="correo" class="form-control input_user" , placeholder="Dirección de correo"
+                required>
             </div>
-          </div>
-          <div class="d-flex justify-content-center form_container">
-            <form  action="/obtenerRegistro" method="POST">
-              <div class="input-group mb-3">
-                <div class="input-group-append">
-                  <span class="input-group-text"><i class="fas fa-user"></i></span>
-                </div>
-                    <input type="email" name="correo" class="form-control input_user", placeholder="Dirección de correo" required>
+            <div class="input-group mb-3">
+              <div class="input-group-append">
+                <span class="input-group-text"><i class="fas fa-key"></i></span>
               </div>
-              <div class="input-group mb-3">
-                <div class="input-group-append">
-                  <span class="input-group-text"><i class="fas fa-key"></i></span>
-                </div>
-                    <input type="text" name="usuario" class="form-control input_pass", placeholder="Usuario" required>
+              <input type="text" name="usuario" class="form-control input_pass" , placeholder="Usuario" required>
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-append">
+                <span class="input-group-text"><i class="fas fa-key"></i></span>
               </div>
-              <div class="input-group mb-3">
-                  <div class="input-group-append">
-                    <span class="input-group-text"><i class="fas fa-key"></i></span>
-                  </div>
-                    <input type="text" name="nombre" class="form-control input_pass", placeholder="Nombre" required>
-                </div>
-                <div class="input-group mb-3">
-                  <div class="input-group-append">
-                    <span class="input-group-text"><i class="fas fa-key"></i></span>
-                  </div>
-                    <input type="password" name="contraseña" class="form-control input_pass", placeholder="Contraseña" required>
-                </div>
-              <div class="d-flex justify-content-center mt-3 login_container">
-                <button class="btn btn-primary">Guardar</button>
+              <input type="text" name="nombre" class="form-control input_pass" , placeholder="Nombre" required>
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-append">
+                <span class="input-group-text"><i class="fas fa-key"></i></span>
               </div>
-            </form>
-          </div>
+              <input type="password" name="contraseña" class="form-control input_pass" , placeholder="Contraseña"
+                required>
+            </div>
+            <div class="d-flex justify-content-center mt-3 login_container">
+              <button class="btn btn-primary">Guardar</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
   </div>
+</div>
 
 {%endblock%}

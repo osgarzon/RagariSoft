@@ -1,0 +1,39 @@
+{%extends 'layout.html'%}
+
+{%block body%}
+
+<div>
+    <br>
+    <form action="/obtenerProfesor" method="POST">
+        <div class="row g-2">
+            <div class="col-md-1">
+                <button class="btn btn-primary"><img id="botonimg"
+                        src="{{url_for('static',filename='iconos/agregar.png')}}"></button>
+            </div>
+            <div class="col-md-6">
+                <h2 id="texto">Agregar Profesor</h2>
+            </div>
+        </div>
+        <br>
+        <div class="row g-2">
+            <div class="col-md-3">
+                <h2 id="texto">Nombre: </h2>
+            </div>
+            <div class="col-md-6">
+                <input type="text" name="id_profesor" class="form-control input_pass" , placeholder="Nombre profesor"
+                    required>
+            </div>
+        </div>
+        <div class="row g-2">
+            <div class="col-md-3">
+                <h2 id="texto">Descripción: </h2>
+            </div>
+            <div class="col-md-6">
+                <input type="text" name="descripcion" class="form-control input_pass" , placeholder="Descripción breve"
+                    required>
+            </div>
+        </div>
+    </form>
+</div>
+
+{%endblock%}

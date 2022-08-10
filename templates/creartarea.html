@@ -1,0 +1,85 @@
+{%extends 'layout.html'%}
+
+{%block body%}
+
+<div>
+    <br>
+    <form action="/obtenerTarea" method="POST">
+        <div class="row g-2">
+            <div class="col-md-1">
+                <button class="btn btn-primary"><img id="botonimg"
+                        src="{{url_for('static',filename='iconos/agregar.png')}}"></button>
+            </div>
+            <div class="col-md-6">
+                <h2 id="texto">Agregar Tarea</h2>
+            </div>
+        </div>
+        <br>
+        <div class="row g-2">
+            <div class="col-md-3">
+                <h2 id="texto">Nombre: </h2>
+            </div>
+            <div class="col-md-6">
+                <input type="text" name="nombre" class="form-control input_pass" , placeholder="Nombre tarea" ,
+                    required>
+            </div>
+        </div>
+        <br>
+        <div class="row g-2">
+            <div class="col-md-3">
+                <h2 id="texto">Fecha: </h2>
+            </div>
+            <div class="col-md-6">
+                <input type="date" name="fecha" class="form-control input_pass" , required>
+            </div>
+        </div>
+        <div class="row g-2">
+            <div class="col-md-3">
+                <h2 id="texto">Hora: </h2>
+            </div>
+            <div class="col-md-6">
+                <input type="time" name="hora" class="form-control input_pass" , required>
+            </div>
+        </div>
+        <br>
+        <div class="row g-2">
+            <div class="col-md-3">
+                <h2 id="texto">Descripción: </h2>
+            </div>
+            <div class="col-md-6">
+                <input type="text" name="descripcion" class="form-control input_pass" , placeholder="Descripción" ,
+                    required>
+            </div>
+        </div>
+        <br>
+        <div class="row g-2">
+            <div class="col-md-3">
+                <h2 id="texto">Profesor: </h2>
+            </div>
+            <div class="col-md-6">
+                <select class="form-select" name="profesor" aria-label="Default select example" , required>
+                    <option selected></option>
+                    {%for profesor in profesoresdb%}
+                    <option>{{profesor.id_profesor}}</option>
+                    {%endfor%}
+                </select>
+            </div>
+        </div>
+        <br>
+        <div class="row g-2">
+            <div class="col-md-3">
+                <h2 id="texto">Materia: </h2>
+            </div>
+            <div class="col-md-6">
+                <select class="form-select" name="materia" aria-label="Default select example" , required>
+                    <option selected></option>
+                    {%for materia in materiasdb%}
+                    <option>{{materia.id_materia}}</option>
+                    {%endfor%}
+                </select>
+            </div>
+        </div>
+    </form>
+</div>
+
+{%endblock%}
