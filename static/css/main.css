@@ -1,0 +1,350 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+body,
+		html {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			background: #013b50 !important;
+
+		}
+		.dropdown-toggle {
+			color: #00768F !important;
+			font-size: 28px;      		
+		}
+
+		.navbar-brand{
+			font-size: 28px;      		
+		}
+		.user_card {
+			height: 400px;
+			width: 350px;
+			font-size: 28px;
+			margin-top: auto;
+			margin-bottom: auto;
+			background: #00768F;
+			position: relative;
+			display: flex;      		
+			justify-content: center;
+			flex-direction: column;
+			padding: 10px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 5px;
+
+		}
+		.brand_logo_container {
+			position: absolute;
+			height: 170px;
+			width: 170px;
+			top: -75px;
+			font-size: 28px;
+			border-radius: 50%;
+			background: #00768F;
+			padding: 10px;
+			text-align: center;
+		}
+		.brand_logo {
+			height: 150px;
+			width: 150px;      		
+			font-size: 28px;
+			border-radius: 50%;
+			border: 2px solid #00768F;
+		}
+		.form_container {
+			margin-top: 100px;      		
+			font-size: 28px;
+		}
+		.btn-primary {
+			width: 100%;
+			background: #505050 !important;
+			color: #C6D7DA !important;      		
+			font-size: 28px;
+            transition-duration: 0.4s;
+		}
+		.btn-primary:hover {
+			background: #8F4300 !important;      		
+			-size: 28px;
+		}
+		.btn-primary:focus {
+            box-shadow: none !important;      		
+			font-size: 28px;
+			outline: 0px !important;
+		}
+		.login_container {
+			padding: 0 2rem;      		
+			font-size: 28px;
+		}
+		.input-group-text {
+			background: #8F4300 !important;      		
+			font-size: 28px;
+			color: white !important;
+			border: 0 !important;
+			border-radius: 0.25rem 0 0 0.25rem !important;
+		}
+		.input_user,
+		.input_pass:focus {
+			box-shadow: none !important;      		
+			font-size: 28px;
+			outline: 0px !important;
+		}
+		.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+			background-color: #c0392b !important;      		
+			font-size: 28px;
+		}
+
+
+.login-page {
+width: 360px;
+padding: 8% 0 0;      		
+font-size: 28px;
+margin: auto;
+}
+
+.navbar{
+	background-color: #DB8840;      		
+	font-size: 28px;
+}
+
+.message{
+	font-size: 20px;
+}
+
+.link{
+	color: #DB8840;      		
+	font-size: 28px;
+}
+
+.link:hover{
+	color: #c0392b;      		
+	font-size: 28px;
+}
+
+.carnal{
+	background-color: #ffc400;      		
+	font-size: 28px;
+}
+
+.caption{
+	color: #ffffff;      		
+	font-size: 28px;
+}
+
+.corral{
+	background-color: #744500;      		
+	font-size: 28px;
+}
+
+.jenos{
+	background-color: #5264ff;      		
+	font-size: 28px;
+}
+
+.kfc{
+	background-color: #e31009;      		
+	font-size: 28px;
+}
+
+.donuts{
+	background-color: #e3099a;      		
+	font-size: 28px;
+}
+
+.tostao{
+	background-color: #966400;      		
+	font-size: 28px;
+}
+
+
+
+.form {
+position: relative;
+z-index: 1;      		
+font-size: 28px;
+background: #00768F;
+max-width: 500px;
+margin: 0 auto 100px;
+padding: 45px;
+text-align: center;
+box-shadow: 0 0 20px 0 #00000033, 0 5px 5px 0 #0000003d;
+}
+.form input {
+font-family: "Roboto", sans-serif;      		
+font-size: 28px;
+outline: 0;
+background: #f2f2f2;
+width: 100%;
+border: 100;
+margin: 0 0 15px;
+padding: 15px;
+box-sizing: border-box;
+font-size: 14px;
+}
+.form button {
+font-family: "Roboto", sans-serif;
+text-transform: uppercase;      		
+outline: 0;
+background: #8F4300;
+width: 100%;
+border: 0;
+padding: 15px;
+color: #FFFFFF;
+font-size: 14px;
+-webkit-transition: all 0.3 ease;
+transition: all 0.3 ease;
+cursor: pointer;
+}
+    
+.form #navbar{
+background: #8F4300;
+text-transform: uppercase;
+padding: 2px 10px;      		
+font-size: 20px;
+text-decoration: none;
+font-weight: bold;
+color: #FFFFFF;
+border-radius: 10px;
+}
+    
+.form #login{
+background: #8F4300;
+text-transform: uppercase;
+/*padding: 2px 10px;*/      		
+font-size: 28px;
+text-decoration: none;
+font-weight: bold;
+color: #FFFFFF;
+border-radius: 10px;
+width: 360px;
+padding: 8% 0 0;
+margin: auto;
+}
+    
+.navbar-brand img{
+width: 50px;       		
+font-size: 28px;
+height: 44px;
+}
+
+.numers{
+	height: 50px;
+	width:  100%; 
+}
+
+.products{
+	color: #FFFFFF;
+	font-size: 28px;
+}
+    
+.navbar-index{
+text-decoration: none;
+font-family: "Roboto", sans-serif;
+width: 10%;
+display: table-row;      		
+color: #FFFFFF;
+font-size: 28px;
+-webkit-transition: all 0.3 ease;
+transition: all 0.3 ease;
+cursor: pointer;
+}
+    /*.form #login{
+        text-decoration: none;
+        font-family: "Roboto", sans-serif;
+        text-transform: uppercase;
+        outline: 0;
+        background: #8F4300;
+        width: 100%;
+        border: 0;
+        padding: 15px;
+        color: #FFFFFF;
+        font-size: 14px;
+        -webkit-transition: all 0.3 ease;
+        transition: all 0.3 ease;
+        cursor: pointer;
+    }*/
+    
+.form_container {
+margin-top: 100px;      		font-size: 28px;
+}
+.form button:hover,.form button:active,.form button:focus {
+background: #FFBA7D;      		font-size: 28px;
+}
+.form .message {
+margin: 15px 0 0;
+color: #C6D7DA;      		font-size: 28px;
+font-size: 12px;
+}
+.form .message a {
+color: #8F4300;
+text-decoration: none;      		font-size: 28px;
+}
+.form .register-form {
+display: none;      		font-size: 28px;
+}
+.container {
+position: relative;      		font-size: 28px;
+z-index: 0;
+max-width: 1500px;
+margin-top: 0px;
+}
+
+.thumbnail{
+	max-width: 400px;      		font-size: 28px;
+}
+
+.producto{
+	background: #8f5100;
+	font-size: 19px;      		font-size: 15px;
+
+}
+
+.prod{
+	height: 0%;
+	width:  0%; 
+}
+
+.carrtables{
+	color: #ffffff
+}
+
+.table{
+	color: #ffffff
+}
+
+.container:before, .container:after {
+content: "";
+display: block;      		font-size: 28px;
+clear: both;
+}
+.container .info {
+margin: 0px auto;      		font-size: 28px;
+text-align: center;
+}
+.container .info h1 {
+margin: 0 0 5px;
+padding: 0;
+font-size: 36px;
+font-weight: 300;      		
+font-size: 28px;
+color: #1a1a1a;
+}
+.container .info span {
+color: #4d4d4d;
+font-size: 12px;
+}
+.container .info span a {
+color: #000000;
+text-decoration: none;      		font-size: 28px;
+}
+.container .info span .fa {
+color: #EF3B3A;      		font-size: 28px;
+}
+body {
+background: #FFFFFF; /* fallback for old browsers */
+background: #FFFFFF;      		font-size: 28px;
+/*background: linear-gradient(90deg, #00768F 0%, rgba(118,184,82,1) 50%);*/
+font-family: "Roboto", sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;      
+}

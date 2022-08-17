@@ -1,9 +1,8 @@
 from flask import Blueprint, render_template, request, redirect, flash, url_for
-from models.tarea import Tarea
-from models.materia import Materia
-from models.profesor import Profesor
 from models.usuario import Usuario
+from models.plato import Plato
 from models.usuariolog import Usuariolog
+
 from utils.db import db
 from flask_login import login_user, logout_user, login_required
 
@@ -94,9 +93,7 @@ def del_usuario(id):
 
 
 def crearTablas():
-    materia = Materia(0, 0, 0)
-    profesor = Profesor(0, 0, 0)
-    tarea = Tarea(0, 0, 0)
+    plato = Plato(0,0)
 
 
 @usuarios.route("/logout")

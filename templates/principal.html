@@ -1,486 +1,153 @@
 {%extends 'layout.html'%}
 
+
+
+
+
 {%block body %}
 <br>
-<div class="row g-3">
-  <div class="col-md-1">
-  </div>
-  <div class="col-md-1">
-    <img src="{{url_for('static',filename='iconos/perfil.png')}}" alt="" width="60" height="54"
-      class="d-inline-block align-text-top">
-  </div>
-  <div class="col-md-6">
-    <h1>Bienvenido {{current_user.nombre_apellido}}</h1>
-  </div>
-</div>
+<div style="background-color:#013b50;">
+  <!--[if gte mso 9]>
+   <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="mso-width-percent:1000;">
+   <v:fill type="frame" src="http://www.yoursite.com/yourimages/photo.jpg"color="#7bceeb" />
+   <v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">
+       <![endif]-->
+  <table height="100%" width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+      <td valign="top" align="left" style="background-repeat:no-repeat; background-size:cover;">
+        <div class="container">
+          <div class="row g-3">
+            <!--PRIMER RESTAURANTE-->
+            <div class="col-md-4 text-center">
+              <div class="thumbnail">
+                <div class="carnal">
+                  <img src="{{url_for('static',filename='images/elcarnal.jpeg')}}" alt="" width="380" height="300"
+                    class="d-inline-block align-text-center">
+                  <div class="caption">
+                    <h3>El carnal</h3>
+                    <p>Comida mexicana al pastor</p>
+                    <form action="/elcarnal" method="post">
+                      <p>
+                        <button type="submit" href="#" class="btn btn-primary" role="button">Menú</button>
+                      </p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--SEGUNDO RESTAURANTE-->
+            <div class="col-md-4 text-center">
+              <div class="thumbnail">
+                <div class="corral">
+                  <img src="{{url_for('static',filename='images/elcorral.jpg')}}" alt="" width="380" height="300"
+                    class="d-inline-block align-text-top">
+                  <div class="caption">
+                    <h3>El corral</h3>
+                    <p>La receta original</p>
+                    <form action="/elcorral" method="post">
+                      <p>
+                        <button type="submit" href="#" class="btn btn-primary" role="button">Menú</button>
+                      </p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--TERCER RESTAURANTE-->
+            <div class=" col-md-4 text-center">
+              <div class="thumbnail">
+                <div class="jenos">
+                  <img src="{{url_for('static',filename='images/jenos.jpg')}}" alt="" width="380" height="300"
+                    class="d-inline-block align-text-top">
+                  <div class="caption">
+                    <h3>Jeno's pizza</h3>
+                    <p>¡La casa de la pizza!</p>
+                    <form action="/elcarnal" method="post">
+                      <p>
+                        <button type="submit" href="#" class="btn btn-primary" role="button">Menú</button>
+                      </p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
 
-<form class="row g-3">
-  <ul class="nav justify-content-end">
-    <li class="nav-item">
-      <div class="dropdown">
-        <!--<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-          data-bs-toggle="dropdown" aria-expanded="false">
-          Profesor
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          {%for profesor in profesoresdb%}
-          <li><a class="dropdown-item" href="#">{{profesor.id_profesor}}</a></li>
-          {%endfor%}
-        </ul>
-      </div>
-    </li>
-    <li class="nav-item">
-      <div class="dropdown">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-          data-bs-toggle="dropdown" aria-expanded="false">
-          Materia
-        </a>
+  <br><br>
 
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          {%for materia in materiasdb%}
-          <li><a class="dropdown-item" href="#">{{materia.id_materia}}</a></li>
-          {%endfor%}
-        </ul>
-      -->
-      </div>
-    </li>
+  <table height="100%" width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+      <td valign="top" align="left" style="background-repeat:no-repeat; background-size:cover;">
+        <div class="container">
+          <div class="row g-3">
+            <!--CUARTO RESTAURANTE-->
+            <div class="col-md-4 text-center">
+              <div class="thumbnail">
+                <div class="kfc">
+                  <img src="{{url_for('static',filename='images/kfc.png')}}" alt="" width="380" height="300"
+                    class="d-inline-block align-text-center">
+                  <div class="caption">
+                    <h3>Kentucky Fried Chicken</h3>
+                    <p>¡Para chuparse los dedos!</p>
+                    <form action="/kfc" method="post">
+                      <p>
+                        <button type="submit" href="#" class="btn btn-primary" role="button">Menú</button>
+                      </p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--QUINTO RESTAURANTE-->
+            <div class="col-md-4 text-center">
+              <div class="thumbnail">
+                <div class="donuts">
+                  <img src="{{url_for('static',filename='images/dunkin.jpeg')}}" alt="" width="380" height="300"
+                    class="d-inline-block align-text-top">
+                  <div class="caption">
+                    <h3>Dunkin' Donuts</h3>
+                    <p>¡Cafetería y Donas!</p>
+                    <form action="/elcorral" method="post">
+                      <p>
+                        <button type="submit" href="#" class="btn btn-primary" role="button">Menú</button>
+                      </p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--SEXTO RESTAURANTE-->
+            <div class=" col-md-4 text-center">
+              <div class="thumbnail">
+                <div class="tostao">
+                  <img src="{{url_for('static',filename='images/tostao.jpg')}}" alt="" width="380" height="300"
+                    class="d-inline-block align-text-top">
+                  <div class="caption">
+                    <h3>Tostao'</h3>
+                    <p>Café & Pan</p>
+                    <form action="/elcarnal" method="post">
+                      <p>
+                        <button type="submit" href="#" class="btn btn-primary" role="button">Menú</button>
+                      </p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
 
-  </ul>
-
-
-  <div class="row mb-3">
-    <div class="table-responsive">
-      <table class="table">
-        <thead>
-          <tr id="days">
-            <th scope="col">Hora</th>
-            <th scope="col">Lunes</th>
-            <th scope="col">Martes</th>
-            <th scope="col">Miercoles</th>
-            <th scope="col">Jueves</th>
-            <th scope="col">Viernes</th>
-            <th scope="col">Sabado</th>
-            <th scope="col">Domingo</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row" id="hora">06:00 08:00</th>
-            {%for tarea in tareasdb%}
-            {%if tarea.hora.strftime('%H')=="06" or tarea.hora.strftime('%H')=="07"%}
-            <td>
-              {%if tarea.fecha.weekday()==0%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==1%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==2%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==3%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==4%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==5%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==6%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            {%endif%}
-            {%endfor%}
-          </tr>
-          <tr>
-            <th scope="row" id="hora">08:00 10:00</th>
-            {%for tarea in tareasdb%}
-            {%if tarea.hora.strftime('%H')=="08" or tarea.hora.strftime('%H')=="09"%}
-            <td>
-              {%if tarea.fecha.weekday()==0%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==1%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==2%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==3%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==4%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==5%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==6%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            {%endif%}
-            {%endfor%}
-          </tr>
-          <tr>
-            <th scope="row" id="hora">10:00 12:00</th>
-            {%for tarea in tareasdb%}
-            {%if tarea.hora.strftime('%H')=="10" or tarea.hora.strftime('%H')=="11"%}
-            <td>
-              {%if tarea.fecha.weekday()==0%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==1%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==2%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==3%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==4%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==5%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==6%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            {%endif%}
-            {%endfor%}
-          </tr>
-          <tr>
-            <th scope="row" id="hora">12:00 14:00</th>
-            {%for tarea in tareasdb%}
-            {%if tarea.hora.strftime('%H')=="12" or tarea.hora.strftime('%H')=="13"%}
-            <td>
-              {%if tarea.fecha.weekday()==0%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==1%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==2%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==3%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==4%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==5%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==6%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            {%endif%}
-            {%endfor%}
-          </tr>
-          <tr>
-            <th scope="row" id="hora">14:00 16:00</th>
-            {%for tarea in tareasdb%}
-            {%if tarea.hora.strftime('%H')=="14" or tarea.hora.strftime('%H')=="15"%}
-            <td>
-              {%if tarea.fecha.weekday()==0%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==1%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==2%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==3%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==4%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==5%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==6%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            {%endif%}
-            {%endfor%}
-          </tr>
-          <tr>
-            <th scope="row" id="hora">16:00 18:00</th>
-            {%for tarea in tareasdb%}
-            {%if tarea.hora.strftime('%H')=="16" or tarea.hora.strftime('%H')=="17"%}
-            <td>
-              {%if tarea.fecha.weekday()==0%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==1%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==2%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==3%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==4%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==5%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==6%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            {%endif%}
-            {%endfor%}
-          </tr>
-          <tr>
-            <th scope="row" id="hora">18:00 20:00</th>
-            {%for tarea in tareasdb%}
-            {%if tarea.hora.strftime('%H')=="18" or tarea.hora.strftime('%H')=="19"%}
-            <td>
-              {%if tarea.fecha.weekday()==0%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==1%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==2%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==3%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==4%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==5%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==6%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            {%endif%}
-            {%endfor%}
-          </tr>
-          <tr>
-            <th scope="row" id="hora">20:00 22:00</th>
-            {%for tarea in tareasdb%}
-            {%if tarea.hora.strftime('%H')=="20" or tarea.hora.strftime('%H')=="21"%}
-            <td>
-              {%if tarea.fecha.weekday()==0%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==1%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==2%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==3%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==4%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==5%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==6%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            {%endif%}
-            {%endfor%}
-          </tr>
-          <tr>
-            <th scope="row" id="hora">22:00 24:00</th>
-            {%for tarea in tareasdb%}
-            {%if tarea.hora.strftime('%H')=="22" or tarea.hora.strftime('%H')=="23"%}
-            <td>
-              {%if tarea.fecha.weekday()==0%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==1%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==2%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==3%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==4%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==5%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            <td>
-              {%if tarea.fecha.weekday()==6%}
-              {{tarea.id_tarea}}
-              {%endif%}
-            </td>
-            {%endif%}
-            {%endfor%}
-          </tr>
-
-        </tbody>
-      </table>
-    </div>
-  </div>
-</form>
-<div class="row g-3">
-  <div class="col-md-1">
-  </div>
-  <div class="col-md-2">
-    <form action="/creaprofesor" method="GET">
-      <button class="btn btn-primary" type="submit">Agregar profesor<img id="botonimg"
-          src="{{url_for('static',filename='iconos/agregar.png')}}"></button>
-    </form>
-  </div>
-  <div class="col-md-2">
-    <form action="/creamateria" method="GET">
-      <button class="btn btn-primary" type="submit">Agregar materia<img id="botonimg"
-          src="{{url_for('static',filename='iconos/agregar.png')}}"></button>
-    </form>
-  </div>
-  <div class="col-md-2">
-    <form action="/creatarea" method="GET">
-      <button class="btn btn-primary" type="submit">Agregar tarea<img id="botonimg"
-          src="{{url_for('static',filename='iconos/agregar.png')}}"></button>
-    </form>
-  </div>
-  <div class="col-md-2">
-    <form action="/eliminar" method="GET">
-      <button class="btn btn-primary">Eliminar<img id="botonimg"
-          src="{{url_for('static',filename='iconos/borrar.png')}}"></button>
-    </form>
-  </div>
-  <div class="col-md-2">
-    <form action="/actualizar" method="GET">
-      <button class="btn btn-primary">Actualizar<img id="botonimg"
-          src="{{url_for('static',filename='iconos/actualizar.png')}}"></button>
-    </form>
-  </div>
+  <!--[if gte mso 9]>
+      </v:textbox>
+      </v:rect>
+      <![endif]-->
 </div>
 </body>
 

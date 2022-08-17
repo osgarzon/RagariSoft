@@ -6,9 +6,9 @@
             <a class="navbar-brand" href="/signin">
                 {%endif%}
 
-                <img src="{{url_for('static',filename='iconos/icono.png')}}" alt="" width="30" height="24"
+                <img src="{{url_for('static',filename='images/icono.png')}}" alt="" width="30" height="24"
                     class="d-inline-block align-text-top">
-                Studily
+                Ragarisoft
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -31,6 +31,7 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             {%if current_user.id_Usuario%}
                             <li><a class="dropdown-item" href="/principal">Principal</a></li>
+                            <li><a class="dropdown-item" href="/obtenerCarrito">Carrito</a></li>
                             <li><a class="dropdown-item" href="/logout">Cerrar sesión</a></li>
                             {%else%}
                             <li><a class="dropdown-item" href="/signin">Iniciar Sesión</a></li>

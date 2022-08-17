@@ -1,0 +1,113 @@
+{%extends 'layout.html'%}
+
+{%block body%}
+
+<div>
+    <br>
+    <div class="carrtables">
+        <div class="row g-2">
+            <div class="col-md-1"></div>
+            <div class="col-md-6">
+                <h2 id="texto">Carrito</h2>
+            </div>
+        </div>
+        <br>
+        <div class="row g-2">
+            <div class="col-md-1"></div>
+            <div class="col-md-3">
+                <h2 id="texto">Agregado al carrito: </h2>
+            </div>
+        </div>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th scope="row" id="productos">Elemento</th>
+                    {%for plato in platosdb%}
+                    <td>
+                        {{plato.id_Plato}}
+
+                    </td>
+                    {%endfor%}
+                </tr>
+                <tr>
+                    <th scope="row" id="productos">Cantidad</th>
+                    {%for plato in platosdb%}
+                    <td>
+                        {{plato.cantidad}}
+                    </td>
+                    {%endfor%}
+                </tr>
+                <tr>
+                    <th scope="row" id="productos">Valor total</th>
+                    {%for plato in platosdb%}
+                    {%if plato.id_Plato == "Super combo familiar"%}
+                    <td>
+                        {{39900*plato.cantidad}}
+                    </td>
+                    {%endif%}
+                    {%if plato.id_Plato == "Ensalada grande"%}
+                    <td>
+                        {{5900*plato.cantidad}}
+                    </td>
+                    {%endif%}
+                    {%if plato.id_Plato == "Papas grandes"%}
+                    <td>
+                        {{6500*plato.cantidad}}
+                    </td>
+                    {%endif%}
+                    {%if plato.id_Plato == "Avalancha oreo"%}
+                    <td>
+                        {{6000*plato.cantidad}}
+                    </td>
+                    {%endif%}
+                    {%endfor%}
+                </tr>
+                <th scope="row" id="productos">Total compra</th>
+                <td>
+                    {{ a }}
+                </td>
+            </tbody>
+        </table>
+
+        <div class="row g-7">
+            <div class="col-md-1">
+
+                <img src="{{url_for('static',filename='images/master.jpg')}}" alt="" width="150" height="150"
+                    class="d-inline-block align-text-top">
+
+            </div>
+            <div class="col-md-1">
+
+            </div>
+            <div class="col-md-1">
+
+                <img src="{{url_for('static',filename='images/visa.png')}}" alt="" width="150" height="150"
+                    class="d-inline-block align-text-top">
+
+            </div>
+            <div class="col-md-1">
+
+            </div>
+            <div class="col-md-1">
+
+                <img src="{{url_for('static',filename='images/american.png')}}" alt="" width="150" height="150"
+                    class="d-inline-block align-text-top">
+
+            </div>
+            <div class="col-md-1">
+
+            </div>
+
+            <div class="col-md-2">
+                <form action="/pago" method="POST">
+                    <p>
+                        <button type="submit" href="#" class="btn btn-primary" role="button" width="150"
+                            height="150">Pagar</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%endblock%}

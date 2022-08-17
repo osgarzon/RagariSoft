@@ -1,0 +1,478 @@
+{%extends 'layout.html'%}
+
+
+{%block body %}
+<br>
+<div style="background-color:#013b50;">
+    <!--[if gte mso 9]>
+   <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="mso-width-percent:1000;">
+   <v:fill type="frame" src="http://www.yoursite.com/yourimages/photo.jpg"color="#7bceeb" />
+   <v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">
+       <![endif]-->
+    <form action="/carrito" method="POST">
+        <table height="100%" width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+                <td valign="top" align="left" style="background-repeat:no-repeat; background-size:cover;">
+                    <div class="container">
+                        <div class="row g-3">
+                            <!--PRIMER PLATO-->
+                            <div class="col-md-4 text-center">
+                                <div class="thumbnail">
+                                    <div class="carnal">
+                                        <img src="{{url_for('static',filename='images/broaster.jpg')}}" alt=""
+                                            width="380" height="300" class="d-inline-block align-text-center">
+                                        <div class="caption">
+                                            <h3>Pollo broaster con papas</h3>
+                                            <p>$ 20.900</p>
+                                            <div class="numers">
+                                                <input type="number" name="creditos" class="form-control input_pass" ,
+                                                    placeholder="Cantidad" width="15" height="35">
+                                            </div>
+                                            <p>
+                                                <button type="submit" href="#" class="btn btn-primary" role="button">
+                                                    <img src="{{url_for('static',filename='images/carrito.png')}}"
+                                                        alt="" width="25" height="25"
+                                                        class="d-inline-block align-text-center">
+                                                    Agregar al carrito</button>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--SEGUNDO PLATO-->
+                            <div class="col-md-4 text-center">
+                                <div class="thumbnail">
+                                    <div class="corral">
+                                        <img src="{{url_for('static',filename='images/burguer.jpg')}}" alt=""
+                                            width="380" height="300" class="d-inline-block align-text-top">
+                                        <div class="caption">
+                                            <h3>Hamburguesa monster</h3>
+                                            <p>$ 13.900</p>
+                                            <div class="numers">
+                                                <input type="number" name="creditos" class="form-control input_pass" ,
+                                                    placeholder="Cantidad" width="15" height="35">
+                                            </div>
+                                            <p name="burguer">
+                                                <button type="submit" href="#" class="btn btn-primary" role="button">
+                                                    <img src="{{url_for('static',filename='images/carrito.png')}}"
+                                                        alt="" width="25" height="25"
+                                                        class="d-inline-block align-text-center">
+                                                    Agregar al carrito</button>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--TERCER PLATO-->
+                            <div class=" col-md-4 text-center">
+                                <div class="thumbnail">
+                                    <div class="jenos">
+                                        <img src="{{url_for('static',filename='images/combo.webp')}}" alt="" width="380"
+                                            height="300" class="d-inline-block align-text-top">
+                                        <div class="caption">
+                                            <h3>Super combo familiar</h3>
+                                            <p>$ 39.900</p>
+                                            <div class="numers">
+                                                <input type="number" name="burguer" class="form-control input_pass" ,
+                                                    placeholder="Cantidad" width="15" height="35">
+                                            </div>
+                                            <div>
+                                                <button type="submit" href="#" class="btn btn-primary" role="button">
+                                                    <img src="{{url_for('static',filename='images/carrito.png')}}"
+                                                        alt="" width="25" height="25"
+                                                        class="d-inline-block align-text-center">
+                                                    Agregar al carrito</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <!--[if gte mso 9]>
+      </v:textbox>
+      </v:rect>
+      <![endif]-->
+</div>
+
+<br><br>
+<div class="row g-2">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-6">
+        <div class="products">
+            <h2 id="texto">Productos adicionales</h2>
+        </div>
+    </div>
+</div><br><br>
+<div style="background-color:#013b50;">
+    <!--[if gte mso 9]>
+   <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="mso-width-percent:1000;">
+   <v:fill type="frame" src="http://www.yoursite.com/yourimages/photo.jpg"color="#7bceeb" />
+   <v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">
+       <![endif]-->
+    <table height="100%" width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td valign="top" align="left" style="background-repeat:no-repeat; background-size:cover;">
+                <div class="container">
+                    <div class="row g-4">
+                        <!--PRIMER PRODUCTO-->
+                        <div class="col-md-3 text-center">
+                            <div class="thumbnail">
+                                <div class="producto">
+                                    <img src="{{url_for('static',filename='images/col.jpg')}}" alt="" width="300"
+                                        height="220" class="d-inline-block align-text-center">
+                                    <div class="caption" font-size="19px;">
+                                        <h3>Acompañamiento con Col</h3>
+                                        <p>$ 5.500</p>
+                                        <div class="numers">
+                                            <input type="number" name="creditos" class="form-control input_pass" ,
+                                                placeholder="Cantidad" width="15" height="35">
+                                        </div>
+                                        <p>
+                                            <button type="submit" href="#" class="btn btn-primary" role="button">
+                                                <img src="{{url_for('static',filename='images/carrito.png')}}" alt=""
+                                                    width="25" height="25" class="d-inline-block align-text-center">
+                                                Agregar al carrito</button>
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--SEGUNDO PRODUCTO-->
+                        <div class="col-md-3 text-center">
+                            <div class="thumbnail">
+                                <div class="corral">
+                                    <div class="producto">
+                                        <img src="{{url_for('static',filename='images/pepsi.jpeg')}}" alt="" width="300"
+                                            height="220" class="d-inline-block align-text-center">
+                                        <div class="caption">
+                                            <h3>Gaseosa grande</h3>
+                                            <p>$ 6.900</p>
+                                            <div class="numers">
+                                                <input type="number" name="creditos" class="form-control input_pass" ,
+                                                    placeholder="Cantidad" width="15" height="35">
+                                            </div>
+                                            <p>
+                                                <button type="submit" href="#" class="btn btn-primary" role="button">
+                                                    <img src="{{url_for('static',filename='images/carrito.png')}}"
+                                                        alt="" width="25" height="25"
+                                                        class="d-inline-block align-text-center">
+                                                    Agregar al carrito</button>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--TERCER PRODUCTO-->
+                        <div class=" col-md-3 text-center">
+                            <div class="thumbnail">
+                                <div class="jenos">
+                                    <div class="producto">
+                                        <img src="{{url_for('static',filename='images/3presas.jpeg')}}" alt=""
+                                            width="300" height="220" class="d-inline-block align-text-center">
+                                        <div class="caption">
+                                            <h3>Adicional 3 presas</h3>
+                                            <p>$ 9.900</p>
+                                            <div class="numers">
+                                                <input type="number" name="creditos" class="form-control input_pass" ,
+                                                    placeholder="Cantidad" width="15" height="35">
+                                            </div>
+                                            <p>
+                                                <button type="submit" href="#" class="btn btn-primary" role="button">
+                                                    <img src="{{url_for('static',filename='images/carrito.png')}}"
+                                                        alt="" width="25" height="25"
+                                                        class="d-inline-block align-text-center">
+                                                    Agregar al carrito</button>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--CUARTO PRODUCTO-->
+                        <div class=" col-md-3 text-center">
+                            <div class="thumbnail">
+                                <div class="jenos">
+                                    <div class="producto">
+                                        <img src="{{url_for('static',filename='images/arepa.jpeg')}}" alt="" width="300"
+                                            height="220" class="d-inline-block align-text-center">
+                                        <div class="caption">
+                                            <h3>Arepa de trigo</h3>
+                                            <p>$ 3.000</p>
+                                            <div class="numers">
+                                                <input type="number" name="creditos" class="form-control input_pass" ,
+                                                    placeholder="Cantidad" width="15" height="35">
+                                            </div>
+                                            <p>
+                                                <button type="submit" href="#" class="btn btn-primary" role="button">
+                                                    <img src="{{url_for('static',filename='images/carrito.png')}}"
+                                                        alt="" width="25" height="25"
+                                                        class="d-inline-block align-text-center">
+                                                    Agregar al carrito</button>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <br><br>
+
+
+    <!------------------------------------------------------------------------------
+    -------------------------------------------------------------------------------
+    --------------------------------------------------------------------------------->
+    <table height="100%" width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td valign="top" align="left" style="background-repeat:no-repeat; background-size:cover;">
+                <div class="container">
+                    <div class="row g-4">
+                        <!--Quinto PRODUCTO-->
+                        <div class="col-md-3 text-center">
+                            <div class="thumbnail">
+                                <div class="producto">
+                                    <img src="{{url_for('static',filename='images/papas.jpeg')}}" alt="" width="300"
+                                        height="220" class="d-inline-block align-text-center">
+                                    <div class="caption" font-size="19px;">
+                                        <h3>Papas grandes</h3>
+                                        <p>$ 6.500</p>
+                                        <div class="numers">
+                                            <input type="number" name="papas" class="form-control input_pass" ,
+                                                placeholder="Cantidad" width="15" height="25">
+                                        </div>
+                                        <p>
+                                            <button type="submit" href="#" class="btn btn-primary" role="button">
+                                                <img src="{{url_for('static',filename='images/carrito.png')}}" alt=""
+                                                    width="25" height="25" class="d-inline-block align-text-center">
+                                                Agregar al carrito</button>
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--SEXTO PRODUCTO-->
+                        <div class="col-md-3 text-center">
+                            <div class="thumbnail">
+                                <div class="corral">
+                                    <div class="producto">
+                                        <img src="{{url_for('static',filename='images/ensalada.jpeg')}}" alt=""
+                                            width="300" height="220" class="d-inline-block align-text-center">
+                                        <div class="caption">
+                                            <h3>Ensalada pequeña</h3>
+                                            <p>$ 3.400</p>
+                                            <div class="numers">
+                                                <input type="number" name="creditos" class="form-control input_pass" ,
+                                                    placeholder="Cantidad" width="15" height="35">
+                                            </div>
+                                            <p>
+                                                <button type="submit" href="#" class="btn btn-primary" role="button">
+                                                    <img src="{{url_for('static',filename='images/carrito.png')}}"
+                                                        alt="" width="25" height="25"
+                                                        class="d-inline-block align-text-center">
+                                                    Agregar al carrito</button>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--SEPTIMO PRODUCTO-->
+                        <div class=" col-md-3 text-center">
+                            <div class="thumbnail">
+                                <div class="jenos">
+                                    <div class="producto">
+                                        <img src="{{url_for('static',filename='images/ensaladgrande.jpeg')}}" alt=""
+                                            width="300" height="220" class="d-inline-block align-text-center">
+                                        <div class="caption">
+                                            <h3>Ensalada grande</h3>
+                                            <p>$ 5.900</p>
+                                            <div class="numers">
+                                                <input type="number" name="ensalada" class="form-control input_pass" ,
+                                                    placeholder="Cantidad" width="15" height="35">
+                                            </div>
+                                            <p>
+                                                <button type="submit" href="#" class="btn btn-primary" role="button">
+                                                    <img src="{{url_for('static',filename='images/carrito.png')}}"
+                                                        alt="" width="25" height="25"
+                                                        class="d-inline-block align-text-center">
+                                                    Agregar al carrito</button>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--OCTAVO PRODUCTO-->
+                        <div class=" col-md-3 text-center">
+                            <div class="thumbnail">
+                                <div class="jenos">
+                                    <div class="producto">
+                                        <img src="{{url_for('static',filename='images/mrtea.jpeg')}}" alt="" width="300"
+                                            height="220" class="d-inline-block align-text-center">
+                                        <div class="caption">
+                                            <h3>Té helado</h3>
+                                            <p>$ 2.800</p>
+                                            <div class="numers">
+                                                <input type="number" name="creditos" class="form-control input_pass" ,
+                                                    placeholder="Cantidad" width="15" height="35">
+                                            </div>
+                                            <p>
+                                                <button type="submit" href="#" class="btn btn-primary" role="button">
+                                                    <img src="{{url_for('static',filename='images/carrito.png')}}"
+                                                        alt="" width="25" height="25"
+                                                        class="d-inline-block align-text-center">
+                                                    Agregar al carrito</button>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <!------------------------------------------------------------------------------
+    -------------------------------------------------------------------------------
+    --------------------------------------------------------------------------------->
+    <table height="100%" width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td valign="top" align="left" style="background-repeat:no-repeat; background-size:cover;">
+                <div class="container">
+                    <div class="row g-4">
+                        <!--NOVENO PRODUCTO-->
+                        <div class="col-md-3 text-center">
+                            <div class="thumbnail">
+                                <div class="producto">
+                                    <img src="{{url_for('static',filename='images/heladofresa.jpeg')}}" alt=""
+                                        width="300" height="220" class="d-inline-block align-text-center">
+                                    <div class="caption" font-size="19px;">
+                                        <h3>Helado de mora y fresa</h3>
+                                        <p>$ 5.000</p>
+                                        <div class="numers">
+                                            <input type="number" name="creditos" class="form-control input_pass" ,
+                                                placeholder="Cantidad" width="15" height="25">
+                                        </div>
+                                        <p>
+                                            <button type="submit" href="#" class="btn btn-primary" role="button">
+                                                <img src="{{url_for('static',filename='images/carrito.png')}}" alt=""
+                                                    width="25" height="25" class="d-inline-block align-text-center">
+                                                Agregar al carrito</button>
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--DECIMO PRODUCTO-->
+                        <div class="col-md-3 text-center">
+                            <div class="thumbnail">
+                                <div class="corral">
+                                    <div class="producto">
+                                        <img src="{{url_for('static',filename='images/vainillaarequipe.jpeg')}}" alt=""
+                                            width="300" height="220" class="d-inline-block align-text-center">
+                                        <div class="caption">
+                                            <h3>Helado vainilla y arequipe</h3>
+                                            <p>$ 5.000</p>
+                                            <div class="numers">
+                                                <input type="number" name="creditos" class="form-control input_pass" ,
+                                                    placeholder="Cantidad" width="15" height="35">
+                                            </div>
+                                            <p>
+                                                <button type="submit" href="#" class="btn btn-primary" role="button">
+                                                    <img src="{{url_for('static',filename='images/carrito.png')}}"
+                                                        alt="" width="25" height="25"
+                                                        class="d-inline-block align-text-center">
+                                                    Agregar al carrito</button>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--ONCEAVO PRODUCTO-->
+                        <div class=" col-md-3 text-center">
+                            <div class="thumbnail">
+                                <div class="jenos">
+                                    <div class="producto">
+                                        <img src="{{url_for('static',filename='images/avalancha.jpeg')}}" alt=""
+                                            width="300" height="220" class="d-inline-block align-text-center">
+                                        <div class="caption">
+                                            <h3>Avalancha oreo</h3>
+                                            <p>$ 6.000</p>
+                                            <div class="numers">
+                                                <input type="number" name="oreo" class="form-control input_pass" ,
+                                                    placeholder="Cantidad" width="15" height="35">
+                                            </div>
+                                            <p>
+                                                <button type="submit" href="#" class="btn btn-primary" role="button">
+                                                    <img src="{{url_for('static',filename='images/carrito.png')}}"
+                                                        alt="" width="25" height="25"
+                                                        class="d-inline-block align-text-center">
+                                                    Agregar al carrito</button>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--DOCEAVO PRODUCTO-->
+                        <div class=" col-md-3 text-center">
+                            <div class="thumbnail">
+                                <div class="jenos">
+                                    <div class="producto">
+                                        <img src="{{url_for('static',filename='images/fresa.jpeg')}}" alt="" width="300"
+                                            height="220" class="d-inline-block align-text-center">
+                                        <div class="caption">
+                                            <h3>Helado de fresa</h3>
+                                            <p>$ 5.000</p>
+                                            <div class="numers">
+                                                <input type="number" name="creditos" class="form-control input_pass" ,
+                                                    placeholder="Cantidad" width="15" height="35">
+                                            </div>
+                                            <p>
+                                                <button type="submit" href="#" class="btn btn-primary" role="button">
+                                                    <img src="{{url_for('static',filename='images/carrito.png')}}"
+                                                        alt="" width="30" height="30"
+                                                        class="d-inline-block align-text-center">
+                                                    Agregar al carrito</button>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    </form>
+</div>
+
+
+
+{%endblock%}
