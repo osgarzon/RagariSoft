@@ -1,3 +1,17 @@
-{
-    "python.formatting.provider": "black"
-}
+
+    {
+        "name": "Python: Flask-testing",
+        "type": "python",
+        "request": "launch",
+        "module": "flask",
+        "env": {
+            "FLASK_APP": "app.py",
+            "FLASK_ENV": "development",
+            "FLASK_DEBUG": "1"
+        },
+        "args": [
+            "test"
+        ],
+        "jinja": true
+        ,"justMyCode":true
+    }

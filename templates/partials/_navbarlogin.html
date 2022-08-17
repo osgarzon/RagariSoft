@@ -1,38 +1,44 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img src="{{url_for('static',filename='iconos/icono.png')}}" alt="" width="30" height="24"
-                class="d-inline-block align-text-top">
-            Studily
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            </ul>
-            <form class="d-flex">
-                <div class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        {%if current_user.id_Usuario%}
+        {%if current_user.id_Usuario%}
+        <a class="navbar-brand" href="/principal">
+            {%else%}
+            <a class="navbar-brand" href="/signin">
+                {%endif%}
+
+                <img src="{{url_for('static',filename='iconos/icono.png')}}" alt="" width="30" height="24"
+                    class="d-inline-block align-text-top">
+                Studily
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                </ul>
+                <form class="d-flex">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            {%if current_user.id_Usuario%}
                             {{current_user.nombre_apellido}}
-                        {%else%}
+                            {%else%}
                             Inicio de Sesión
-                        {%endif%}
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        {%if current_user.id_Usuario%}
+                            {%endif%}
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            {%if current_user.id_Usuario%}
                             <li><a class="dropdown-item" href="/principal">Principal</a></li>
                             <li><a class="dropdown-item" href="/logout">Cerrar sesión</a></li>
-                        {%else%}
+                            {%else%}
                             <li><a class="dropdown-item" href="/signin">Iniciar Sesión</a></li>
                             <li><a class="dropdown-item" href="/signup">Registrarse</a></li>
-                        {%endif%}
-                    </ul>
-                </div>
-            </form>
-        </div>
+                            {%endif%}
+                        </ul>
+                    </div>
+                </form>
+            </div>
     </div>
 </nav>

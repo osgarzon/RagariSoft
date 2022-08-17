@@ -1,37 +1,88 @@
+{%extends 'layout.html'%}
+
 {%block body%}
 
-<div class="container h-100">
-  <div class="d-flex justify-content-center h-100">
-    <div class="user_card">
-      <div class="d-flex justify-content-center">
-        <div class="brand_logo_container">
-          <img src="{{url_for('static',filename='iconos/perfil.png')}}" class="brand_logo" alt="Logo">
-        </div>
+<div>
+  <br>
+  <form action="/actualizarTarea" method="POST">
+    <div class="row g-2">
+      <div class="col-md-1">
+        <button class="btn btn-primary"><img id="botonimg"
+            src="{{url_for('static',filename='iconos/actualizar.png')}}"></button>
       </div>
-      <div class="d-flex justify-content-center form_container">
-        <form action="/signin" method="POST">
-          <div class="input-group mb-3">
-            <div class="input-group-append">
-              <span class="input-group-text"><i class="fas fa-user"></i></span>
-            </div>
-            <input type="text" name="usuario" class="form-control input_user" value="" placeholder="Usuario">
-          </div>
-          <div class="input-group mb-2">
-            <div class="input-group-append">
-              <span class="input-group-text"><i class="fas fa-key"></i></span>
-            </div>
-            <input type="password" name="contraseña" class="form-control input_pass" value="" placeholder="Contraseña">
-          </div>
-          <div class="d-flex justify-content-center mt-3 login_container">
-            <button type="submit" name="button" class="btn btn-primary">Iniciar Sesión</button>
-          </div>
-          <div class="d-flex justify-content-center">
-            <p class="message">¿No tienes cuenta? <a class="link" href="/signup">Crea una</a></p>
-          </div>
-        </form>
+      <div class="col-md-6">
+        <h2 id="texto">Actualizar Tarea</h2>
       </div>
     </div>
-  </div>
+    <br>
+    <div class="row g-2">
+      <div class="col-md-3">
+        <h2 id="texto">Nombre: </h2>
+      </div>
+      <div class="col-md-6">
+        <select class="form-select" name="nombre" aria-label="Default select example" , required>
+          <option selected></option>
+          {%for tarea in tareasdb%}
+          <option>{{tarea.id_tarea}}</option>
+          {%endfor%}
+        </select>
+      </div>
+    </div>
+    <br>
+    <div class="row g-2">
+      <div class="col-md-3">
+        <h2 id="texto">Fecha: </h2>
+      </div>
+      <div class="col-md-6">
+        <input type="date" name="fecha" class="form-control input_pass">
+      </div>
+    </div>
+    <div class="row g-2">
+      <div class="col-md-3">
+        <h2 id="texto">Hora: </h2>
+      </div>
+      <div class="col-md-6">
+        <input type="time" name="hora" class="form-control input_pass">
+      </div>
+    </div>
+    <br>
+    <div class="row g-2">
+      <div class="col-md-3">
+        <h2 id="texto">Descripción: </h2>
+      </div>
+      <div class="col-md-6">
+        <input type="text" name="descripcion" class="form-control input_pass" , placeholder="Descripción">
+      </div>
+    </div>
+    <br>
+    <div class="row g-2">
+      <div class="col-md-3">
+        <h2 id="texto">Profesor: </h2>
+      </div>
+      <div class="col-md-6">
+        <select class="form-select" name="profesor" aria-label="Default select example">
+          <option selected></option>
+          {%for profesor in profesoresdb%}
+          <option>{{profesor.id_profesor}}</option>
+          {%endfor%}
+        </select>
+      </div>
+    </div>
+    <br>
+    <div class="row g-2">
+      <div class="col-md-3">
+        <h2 id="texto">Materia: </h2>
+      </div>
+      <div class="col-md-6">
+        <select class="form-select" name="materia" aria-label="Default select example">
+          <option selected></option>
+          {%for materia in materiasdb%}
+          <option>{{materia.id_materia}}</option>
+          {%endfor%}
+        </select>
+      </div>
+    </div>
+  </form>
 </div>
 
 {%endblock%}

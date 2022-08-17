@@ -18,7 +18,7 @@
   <ul class="nav justify-content-end">
     <li class="nav-item">
       <div class="dropdown">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+        <!--<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
           data-bs-toggle="dropdown" aria-expanded="false">
           Profesor
         </a>
@@ -41,6 +41,7 @@
           <li><a class="dropdown-item" href="#">{{materia.id_materia}}</a></li>
           {%endfor%}
         </ul>
+      -->
       </div>
     </li>
 
@@ -65,93 +66,381 @@
         <tbody>
           <tr>
             <th scope="row" id="hora">06:00 08:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            {%for tarea in tareasdb%}
+            {%if tarea.hora.strftime('%H')=="06" or tarea.hora.strftime('%H')=="07"%}
+            <td>
+              {%if tarea.fecha.weekday()==0%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==1%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==2%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==3%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==4%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==5%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==6%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            {%endif%}
+            {%endfor%}
           </tr>
           <tr>
             <th scope="row" id="hora">08:00 10:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            {%for tarea in tareasdb%}
+            {%if tarea.hora.strftime('%H')=="08" or tarea.hora.strftime('%H')=="09"%}
+            <td>
+              {%if tarea.fecha.weekday()==0%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==1%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==2%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==3%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==4%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==5%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==6%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            {%endif%}
+            {%endfor%}
           </tr>
           <tr>
             <th scope="row" id="hora">10:00 12:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            {%for tarea in tareasdb%}
+            {%if tarea.hora.strftime('%H')=="10" or tarea.hora.strftime('%H')=="11"%}
+            <td>
+              {%if tarea.fecha.weekday()==0%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==1%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==2%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==3%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==4%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==5%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==6%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            {%endif%}
+            {%endfor%}
           </tr>
           <tr>
             <th scope="row" id="hora">12:00 14:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            {%for tarea in tareasdb%}
+            {%if tarea.hora.strftime('%H')=="12" or tarea.hora.strftime('%H')=="13"%}
+            <td>
+              {%if tarea.fecha.weekday()==0%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==1%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==2%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==3%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==4%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==5%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==6%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            {%endif%}
+            {%endfor%}
           </tr>
           <tr>
             <th scope="row" id="hora">14:00 16:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            {%for tarea in tareasdb%}
+            {%if tarea.hora.strftime('%H')=="14" or tarea.hora.strftime('%H')=="15"%}
+            <td>
+              {%if tarea.fecha.weekday()==0%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==1%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==2%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==3%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==4%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==5%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==6%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            {%endif%}
+            {%endfor%}
           </tr>
           <tr>
             <th scope="row" id="hora">16:00 18:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            {%for tarea in tareasdb%}
+            {%if tarea.hora.strftime('%H')=="16" or tarea.hora.strftime('%H')=="17"%}
+            <td>
+              {%if tarea.fecha.weekday()==0%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==1%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==2%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==3%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==4%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==5%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==6%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            {%endif%}
+            {%endfor%}
           </tr>
           <tr>
             <th scope="row" id="hora">18:00 20:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            {%for tarea in tareasdb%}
+            {%if tarea.hora.strftime('%H')=="18" or tarea.hora.strftime('%H')=="19"%}
+            <td>
+              {%if tarea.fecha.weekday()==0%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==1%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==2%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==3%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==4%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==5%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==6%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            {%endif%}
+            {%endfor%}
           </tr>
           <tr>
             <th scope="row" id="hora">20:00 22:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            {%for tarea in tareasdb%}
+            {%if tarea.hora.strftime('%H')=="20" or tarea.hora.strftime('%H')=="21"%}
+            <td>
+              {%if tarea.fecha.weekday()==0%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==1%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==2%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==3%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==4%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==5%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==6%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            {%endif%}
+            {%endfor%}
           </tr>
           <tr>
             <th scope="row" id="hora">22:00 24:00</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            {%for tarea in tareasdb%}
+            {%if tarea.hora.strftime('%H')=="22" or tarea.hora.strftime('%H')=="23"%}
+            <td>
+              {%if tarea.fecha.weekday()==0%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==1%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==2%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==3%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==4%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==5%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            <td>
+              {%if tarea.fecha.weekday()==6%}
+              {{tarea.id_tarea}}
+              {%endif%}
+            </td>
+            {%endif%}
+            {%endfor%}
           </tr>
 
         </tbody>
@@ -181,12 +470,16 @@
     </form>
   </div>
   <div class="col-md-2">
-    <button class="btn btn-primary">Eliminar<img id="botonimg"
-        src="{{url_for('static',filename='iconos/borrar.png')}}"></button>
+    <form action="/eliminar" method="GET">
+      <button class="btn btn-primary">Eliminar<img id="botonimg"
+          src="{{url_for('static',filename='iconos/borrar.png')}}"></button>
+    </form>
   </div>
   <div class="col-md-2">
-    <button class="btn btn-primary">Actualizar<img id="botonimg"
-        src="{{url_for('static',filename='iconos/actualizar.png')}}"></button>
+    <form action="/actualizar" method="GET">
+      <button class="btn btn-primary">Actualizar<img id="botonimg"
+          src="{{url_for('static',filename='iconos/actualizar.png')}}"></button>
+    </form>
   </div>
 </div>
 </body>

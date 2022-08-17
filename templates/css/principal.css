@@ -38,7 +38,7 @@ body,
 
 		.user_card {
 			height: 400px;
-			width: 350px;
+			width: 30px;
 			margin-top: auto;
 			margin-bottom: auto;
 			background: #00768F;
@@ -101,4 +101,9 @@ body,
 		}
 		.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
 			background-color: #c0392b !important;
+		}
+
+		.deleteclass{
+			height: 1px;
+			width: 1px;
 		}

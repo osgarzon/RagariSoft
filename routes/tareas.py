@@ -5,6 +5,7 @@ from models.tarea import Tarea
 from models.profesor import Profesor
 from models.materia import Materia
 from models.usuario import Usuario
+from routes.horarios import horarios
 from utils.db import db
 import tkinter as tk
 from flask_login import current_user
@@ -43,4 +44,55 @@ def obtenerTarea():
     db.session.commit()
 
     flash("Tarea creada")
-    return render_template("/principal.html")
+    return redirect(url_for("horarios.principal"))
+
+
+@tareas.route("/eliminarTarea", methods=["POST"])
+@login_required
+def delete():
+    tarea = request.form["tarea"]
+    print("LA TAREA ES:   ",tarea)
+    tarea = Tarea.query.get(tarea)
+    db.session.delete(tarea)
+    db.session.commit()
+
+    flash("Tarea eliminada")
+    return redirect(url_for("horarios.principal"))
+
+@tareas.route("/actualizarTarea", methods=["POST"])
+@login_required
+def update():
+    comprobador = False
+    tarea = request.form["nombre"]
+    tarea = Tarea.query.get(tarea)
+    fecha = request.form["fecha"]
+    hora = request.form["hora"]
+    descripcion = request.form["descripcion"]
+    profesor = request.form["profesor"]
+    materia = request.form["materia"]
+
+    if(fecha!=""):
+        tarea.fecha=fecha
+        comprobador = True
+    if(hora!=""):
+        tarea.hora=hora
+        comprobador = True
+    if(descripcion!=""):
+        tarea.descripcion=descripcion
+        comprobador = True
+    if(profesor!=""):
+        tarea.id_profesor=profesor
+        comprobador = True
+    if(materia!=""):
+        tarea.id_materia=materia
+        comprobador = True
+
+    if(comprobador):
+        flash("Tarea actualizada")
+        db.session.commit()
+    else:
+        flash("Tarea sin cambios")
+
+        
+
+    return redirect(url_for("horarios.principal"))

@@ -2,5 +2,10 @@ Flask
 Flask-SQLAlchemy
 flask-login
 mysqlclient
+flask-testing
 pytest 
 coverage
+gunicorn
+python-decouple
+flask-wtf
+flask-form
